@@ -1,5 +1,29 @@
-// colors
+// text colors
+$background-color-green: #58e1c1;
+$light-blue: #9addfc;
+$gray: #757575;
+
+// color buttons
+$btn-seccess: #63cc82;
+$btn-error: #e4757a;
+$btn-warning: #fd7856;
+$btn-info: #927bc1;
+$btn-default: #51ddfc;
+
+// color grid
+$grid-color: (
+  "col-3": #deb2ee,
+  "col-4": #7ee6fd,
+  "col-5": #88d9a0,
+  "col-6": #3fabca,
+  "col-7": #ec9fa3,
+  "col-8": #fd9f85,
+  "col-12": #80e8d1
+);
 
 // fonts
+$font-lato: 'Open Sans', sans-serif;
 
 // breakpoints
+$medium: 480px;
+$large: 1400px;

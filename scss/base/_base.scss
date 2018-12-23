@@ -1,5 +1,17 @@
-* {}
+* {
+  // remove all morgin and padding from elements
+  margin: 0;
+  padding: 0;
+  // set up border-box
+  box-sizing: border-box;
+}
 
-ul {}
+ul {
+  // remove default list style
+  list-style: none;
+}
 
-p {}
+p {
+  // make some space between lines of text
+  line-height: 1.5;
+}
