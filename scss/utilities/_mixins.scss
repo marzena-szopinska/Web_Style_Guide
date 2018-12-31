@@ -16,6 +16,11 @@
   display: none;
 }
 
+// Font family
+@mixin family-font {
+  font-family: 'Open Sans', sans-serif;
+}
+
 // Bold Text
 @mixin big-bold-txt($color, $transform: null) {
   color: $color;

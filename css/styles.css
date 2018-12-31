@@ -35,6 +35,7 @@
   }
   .grid__row:nth-of-type(4) .grid__col--6 {
     width: 45%;
+    margin-top: 30px;
   }
   .grid__row:nth-of-type(5) .grid__col--12 {
     width: 95%;
@@ -659,6 +660,7 @@ template {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
 }
 
 ul {
