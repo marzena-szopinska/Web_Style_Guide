@@ -221,10 +221,6 @@ a {
   }
 }
 
-img {
-  width: 100%;
-}
-
 @media (min-width: 769px) {
   .form .img--avatar {
     margin-bottom: 25px;
@@ -232,6 +228,7 @@ img {
 }
 
 .img--avatar {
+  width: 100%;
   display: block;
   width: 50%;
   margin-top: 25px;
@@ -252,6 +249,7 @@ img {
 }
 
 .img--frame {
+  width: 100%;
   margin-top: 25px;
   padding: 0.5em;
   border: 1px solid #757575;
