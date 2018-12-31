@@ -1,0 +1,13 @@
+@import "_variables";
+
+// convert pixels to percentages
+@function px-to-pc($target, $context, $max-width) {
+  @return ($target / $context) * 100%;
+}
+
+// display equally sized and spaced items that line up perfectly across multiple lines
+@function per-line($items) {
+  $g-pct: px-to-pc($gutter);
+  $g-total: $items * $g-pct;
+  @return (100% / $items) - $g-total;
+}

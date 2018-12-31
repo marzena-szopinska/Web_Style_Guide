@@ -1,5 +1,154 @@
+@import '_variables';
+
+// Center Container
+@mixin center {
+  margin: 0 auto;
+  @content;
+}
+
+// Block element
+@mixin block {
+  display: block;
+}
+
+// Hide element
+@mixin hide {
+  display: none;
+}
+
+// Bold Text
+@mixin big-bold-txt($color, $transform: null) {
+  color: $color;
+  font-weight: 700;
+  text-transform: $transform;
+}
+
+// Thin Text
+@mixin light-txt($color: null, $fnt-size: null) {
+  color: $color;
+  font-size: $fnt-size;
+  font-weight: 300;
+}
+
+//Green Bottom border
+@mixin green-bottom-border {
+  border-bottom: 5px solid $color-green;
+}
+
+// Green Left Border
+@mixin green-left-border {
+  border-left: 8px solid $color-green;
+}
+
+// Remove Border
+@mixin remove-border {
+  border: none;
+}
+
+// Italic Text
+@mixin italic($fnt-size: null, $color: null){
+  font-style: italic;
+  font-size: $fnt-size;
+  color: $color;
+}
+
+// Centered Image
+  @mixin centered-img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  // Set Width
+  @mixin set-width($width){
+    width: $width;
+  }
+
+// Padding Mixin
+@mixin space-inside($padding-top: null, $padding-right: null, $padding-bottom: null, $padding-left: null){
+  padding-top: $padding-top;
+  padding-right: $padding-right;
+  padding-bottom: $padding-bottom;
+  padding-left: $padding-left;
+}
+
+// Margin Mixin
+@mixin space-around($margin-top: null, $margin-right: null, $margin-bottom: null, $margin-left: null){
+  margin-top: $margin-top;
+  margin-right: $margin-right;
+  margin-bottom: $margin-bottom;
+  margin-left: $margin-left;
+}
 
 // Media Queries
+@mixin media($breakpoint) {
+  @if $breakpoint == "medium" {
+    @media(min-width: $medium){
+      @content;
+    }
+  }
+  @else if $breakpoint == "large"{
+    @media(min-width: $large){
+      @content;
+    }
+  }
+  @else {
+    @warn "#{$breakpoint} is not a valid breakpoint name.";
+  }
+}
 
+// Flexbox Settings
+@mixin flex-box($dis: flex, $dir: null,
+ $flexwrap: null, $just: null,$basis: null,
+ $flexgrow: null ) {
+  display: $dis;
+  flex-direction: $dir;
+  flex-wrap: $flexwrap;
+  justify-content: $just;
+  flex-basis: $basis;
+  flex-grow: $flexgrow;
+  @content;
+}
 
-// Flexbox settings
+// Button colors for btn--"info" etc
+@mixin themes($map) {
+  @each $theme, $color in $map {
+    &--#{$theme} {
+      background-color: $color;
+    }
+  }
+}
+
+// Smooth border edges
+@mixin smooth-edges {
+  border-radius: 5px;
+}
+
+// Grid style
+@mixin styles {
+  padding-left: 10px;
+  color: #808080;
+  text-transform: lowercase;
+}
+
+// Frame Image
+@mixin frame($width: 1px, $style: solid, $color: #000){
+  padding: .5em;
+  border: $width $style $color;
+}
+
+// Borders
+
+// Grid colors for grid__col"--6" etc
+@mixin grid-color($map) {
+  @each $grid-color, $color in $map {
+    &--#{$grid-color} {
+      &.theme__colors {
+        @include styles;
+        background-color: $color;
+      }
+      &:last-of-type {
+        margin-bottom: 45px;
+      }
+    }
+  }
+}

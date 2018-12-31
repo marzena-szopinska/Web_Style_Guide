@@ -1,4 +1,32 @@
-/*     Image:
-    .img--logo
-    .img--frame
-    .img--avatar */
+
+    img {
+      @include set-width(100%);
+    }
+
+    .form {
+      & .img--avatar {
+        @include media("medium"){
+          @include space-around($margin-bottom: 25px);
+        }
+      }
+    }
+
+    .img--avatar {
+      @include block;
+      @include set-width(50%);
+      @include space-around($margin-top: 25px, $margin-right: auto, $margin-bottom: 25px, $margin-left: auto);
+      @include media("medium"){
+        @include space-around($margin-bottom: 0);
+      }
+    }
+
+    .img--logo {
+      @include media("medium"){
+        @include space-around($margin-right: 100px);
+      }
+    }
+
+    .img--frame {
+      @include space-around($margin-top: 25px);
+      @include frame(1px, solid, $gray);
+    }

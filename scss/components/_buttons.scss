@@ -1,7 +1,26 @@
-/*     Buttons:
-    .btn--default
-    .btn--success
-    .btn--error
-    .btn--warning
-    .btn--info
-    .theme__colors */
+// BUTTONS
+
+    .btn {
+      &--default {
+        @include space-around($margin-top: 40px);
+
+        &[type="submit"] {
+          @include space-around($margin-top: 10px);
+
+          @include media("medium"){
+            @include space-around($margin-top: 15px);
+          }
+        }
+      }
+
+      @include themes($themes);
+
+      @include media("medium"){
+        &--info,
+        &--error,
+        &--success,
+        &--warning  {
+          @include space-around($margin-top: 40px);
+        }
+      }
+    }

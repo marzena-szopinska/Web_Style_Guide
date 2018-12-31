@@ -1,29 +1,38 @@
 // text colors
-$background-color-green: #58e1c1;
-$light-blue: #9addfc;
+$color-green: #58e1c1;
+$light-blue: #51ddfc;
+$light-gray: #D9D9D9;
 $gray: #757575;
+$dark-gray: darken($light-gray, 50%);
+$white-txt: #fff;
+$white-background: rgb(255, 255, 255);
+$default-txt-color: #000;
 
-// color buttons
-$btn-seccess: #63cc82;
-$btn-error: #e4757a;
-$btn-warning: #fd7856;
-$btn-info: #927bc1;
-$btn-default: #51ddfc;
-
-// color grid
+// color grid maps
 $grid-color: (
-  "col-3": #deb2ee,
-  "col-4": #7ee6fd,
-  "col-5": #88d9a0,
-  "col-6": #3fabca,
-  "col-7": #ec9fa3,
-  "col-8": #fd9f85,
-  "col-12": #80e8d1
+  "3": #deb2ee,
+  "4": #7ee6fd,
+  "5": #88d9a0,
+  "6": #3fabca,
+  "7": #ec9fa3,
+  "8": #fd9f85,
+  "12": #80e8d1
 );
 
 // fonts
 $font-lato: 'Open Sans', sans-serif;
 
+// color buttons
+$themes: (
+"info": #927bc1 ,
+"error": #e4757a,
+"default": #51ddfc,
+"success": #63cc82,
+"warning": #fd7856
+);
+
 // breakpoints
-$medium: 480px;
-$large: 1400px;
+$medium: 769px;
+$large: 1024px;
+$max-width: 80%;
+$gutter: 10px;

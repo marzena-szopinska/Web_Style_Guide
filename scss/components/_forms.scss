@@ -1,4 +1,23 @@
-/*     Forms:
-    .form
-    .form__label--hidden
-    .form__input */
+
+    .form {
+      @include set-width(100%);
+    }
+
+    .form__label--hidden {
+      @include hide;
+    }
+
+    .form__input {
+      @include set-width(100%);
+      @include block;
+      @include space-inside($padding-top: .5em, $padding-bottom: .5em, $padding-left: 5px);
+      background-color: $white-background !important;
+      @include remove-border;
+      @include green-bottom-border;
+      @include space-around($margin-bottom: 3px);
+      @include big-bold-txt($color: inherit);
+      @include media("medium") {
+          @include set-width(95%);
+          @include center;
+      }
+    }

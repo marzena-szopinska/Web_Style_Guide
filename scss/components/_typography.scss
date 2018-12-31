@@ -1,6 +1,39 @@
-/*     Typography:
-    .container
-    .link
-    .blockquote
-    .headline--primary
-    .headline--secondary */
+//     Typography:
+    a {
+      text-decoration: none;
+      color: $gray;
+    }
+
+    .headline--primary{
+      font-size: 190%;
+      @include space-inside($padding-left: 10px);
+      color: $color-green;
+    }
+
+    .headline--secondary {
+      @include light-txt($color: $gray, $fnt-size: 105%);
+      @include space-around($margin-top: 55px);
+      &:last-of-type {
+          @include space-around($margin-bottom: 40px);
+      }
+      @include media("medium"){
+          @include space-around($margin-top: 20px);
+      }
+    }
+
+    .link {
+      @include big-bold-txt($color: $light-blue);
+    }
+
+    .blockquote {
+      @include green-left-border;
+      @include italic($fnt-size: 150%, $color: $dark-gray);
+      @include space-around($margin-top: 25px, $margin-bottom: 25px, $margin-left: 15px);
+      @include space-inside($padding-left: 15px);
+    }
+
+    .card {
+      @include media("medium"){
+        @include space-inside($padding-right: 3em);
+      }
+    }
