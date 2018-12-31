@@ -1,5 +1,3 @@
-@import '_variables';
-
 // Center Container
 @mixin center {
   margin: 0 auto;
@@ -20,6 +18,8 @@
 @mixin family-font {
   font-family: 'Open Sans', sans-serif;
 }
+
+//Remove
 
 // Bold Text
 @mixin big-bold-txt($color, $transform: null) {
@@ -43,6 +43,11 @@
 // Green Left Border
 @mixin green-left-border {
   border-left: 8px solid $color-green;
+}
+
+// Remove default undeline from links
+@mixin remove-underline {
+  text-decoration: none;
 }
 
 // Remove Border
@@ -140,8 +145,6 @@
   padding: .5em;
   border: $width $style $color;
 }
-
-// Borders
 
 // Grid colors for grid__col"--6" etc
 @mixin grid-color($map) {

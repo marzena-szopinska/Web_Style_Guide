@@ -24,6 +24,10 @@
       @include smooth-edges;
       @include block;
       font-size: 105%;
+      & a {
+        @include remove-underline;
+        color: $gray;
+      }
       &:first-of-type {
         background-color: $color-green;
       }
